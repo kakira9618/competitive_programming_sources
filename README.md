@@ -1,4 +1,4 @@
-# Competive Programming sources
+# Competive Programming Sources
 kakiraの競技プログラミングの解答コードです。
 
 AtCoder: [kakira](https://beta.atcoder.jp/users/kakira)
