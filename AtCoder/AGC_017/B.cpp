@@ -1,5 +1,5 @@
-// B - Moderate Differences: https://beta.atcoder.jp/contests/agc017/submissions/1410461
-
+//B - Moderate Differences: http://agc017.contest.atcoder.jp/tasks/agc017_b
+//上げるor下げる幅が決まっていれば順番は関係ない。iを動かし、上げるのがi回、下げるのがN-i-1回の場合において、最小の場合と最大の場合の中にBが入っていればOK。
 
 #include <map>
 #include <set>
