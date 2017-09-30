@@ -50,11 +50,11 @@ int dfs(int i, int j, int turn) {
     if (turn == 0) {
         if (i == N) return dp[i][j] = dfs(i, j + 1, 1 - turn) + B[j];
         if (j == M) return dp[i][j] = dfs(i + 1, j, 1 - turn) + A[i];
-        return dp[i][j] = max(dfs(i + 1, j, 1 - turn) + A[i], dfs(i, j + 1, 1 - turn) + B[j]);
+        dp[i][j] = max(dfs(i + 1, j, 1 - turn) + A[i], dfs(i, j + 1, 1 - turn) + B[j]);
     } else {
         if (i == N) return dp[i][j] = dfs(i, j + 1, 1 - turn);
         if (j == M) return dp[i][j] = dfs(i + 1, j, 1 - turn);
-        return dp[i][j] = min(dfs(i + 1, j, 1 - turn), dfs(i, j + 1, 1 - turn));
+        dp[i][j] = min(dfs(i + 1, j, 1 - turn), dfs(i, j + 1, 1 - turn));
     }
     return dp[i][j];
 }
