@@ -44,6 +44,8 @@ const int dx[]={1,0,-1,0,1,1,-1,-1},dy[]={0,-1,0,1,1,-1,-1,1};
 int main() {
     int K;
     cin >> K;
+
+    
     vector<int> R;
     for(int i = 0; i < 1 << K; i++) {
         int r;
