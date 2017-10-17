@@ -1,7 +1,7 @@
 // M - 家: http://tdpc.contest.atcoder.jp/tasks/tdpc_house
 // 1階からH階に昇ると考えても良い。昇ることにする。
 // まず、フロア内にて、部屋sから部屋tに同じ部屋を2度通らずに行く場合の数を求める。これをA[s][t]とする。
-// これを求めるには、dp[i][j] := 現在部屋iに居て、今までに通ってきた部屋の集合がjの場合
+// これを求めるには、dp[i][j] := 現在部屋iに居て、今までに通ってきた部屋の集合がjの場合の数
 // として、dp[i][j] = \sum_k dp[k][j & ~(1 << k)] (ただしj >> k & 1は1)　を計算すれば良い。(c.f. 巡回セールスマン問題)
 // また、A[s][t] = \sum_k dp[t][k] (ただしk >> t & 1は1, dp[s][1 << s] = 1) となる。
 //
@@ -70,7 +70,7 @@ Mat matmul(Mat &A, Mat &B, int mod) {
     return ret;
 }
 
-vector<vector<int> > matpow(Mat &A, ull p, int mod) {
+Mat matpow(Mat &A, ull p, int mod) {
     int N = A.size();
     Mat ret(N, vector<int>(N, 0));
     for (int i = 0; i < N; i++) {
